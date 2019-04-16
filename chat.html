@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>ChatBox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="style.css"> </head>
+
+<body class="chat">
+    <div class="chat__sidebar">
+        <h3>Connected Users</h3>
+        <div id="users"></div>
+    </div>
+    <div class="chat__main">
+        <ol id="messages" class="chat__messages"></ol>
+        <div class="chat__footer">
+            <form id="message-form">
+                <input name="message" type="text" placeholder="Message" autofocus autocomplete="off">
+                <button>Send</button>
+            </form>
+        </div>
+    </div>
+    <script id="message-template" type="text/template">
+        <div class="speech-wrapper">
+            <div class="bubble">
+                <div class="txt">
+                    <p class="name" id="title" style=color:{{colour}}> {{from}}</p>
+                    <p class="message">{{text}}</p>
+                    <span class="timestamp">{{createdAt}}</span> </div>
+                <div class="bubble-arrow"></div>
+            </div>
+        </div>
+    </script>
+    <script id="message-template-alter" type="text/template">
+        <div class="speech-wrapper">
+            <!--  Speech Bubble alternative -->
+            <div class="bubble_alt">
+                <div class="txt">
+                    <p class="name" id="title" style=color:{{colour}}>{{from}}</p>
+                    <p class="message">{{text}}</p>
+                    <span class="timestamp">{{createdAt}}</span> </div>
+                <div class="bubble-arrow_alt"></div>
+            </div>
+        </div>
+    </script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/libs/jquery-3.3.1.min.js"></script>
+    <script src="/js/libs/moment.js"></script>
+    <script src="/js/libs/mustache.min.js"></script>
+    <script src="/js/libs/deparam.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>

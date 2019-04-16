@@ -1,0 +1,32 @@
+{
+  "name": "ChatBox",
+  "version": "1.0.0",
+  "description": "Chat App that lets interact several Users by messaging into same group",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "mocha server/**/*.test.js",
+    "test-watch": "nodemon --exec 'npm test'"
+  },
+  "author": "Evm7",
+  "license": "none",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Evm7"
+  },
+  "dependencies": {
+    "expect": "^1.20.2",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0",
+    "moment": "^2.24.0",
+    "mustache": "^3.0.1",
+    "npm-install-all": "^1.1.21",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "nodemon": "^1.18.3"
+  }
+}
