@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 /* jshint node: true */
 /* jshint esversion: 6 */
 /* globals $:false*/
-=======
->>>>>>> ChatBox/master
+
 const socket = io();
 var username;
 var users_room;
@@ -20,11 +18,8 @@ function scrollToBottom() {
     if (clientHeight + scrollTop + newMessageHeight + lastMessageHeight >= scrollHeight) {
         messages.scrollTop(scrollHeight);
     }
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> ChatBox/master
+
 socket.on('connect', function () {
     const params = jQuery.deparam(window.location.search);
     username = params.username;
@@ -50,23 +45,12 @@ socket.on('updateUserList', function (users) {
     jQuery(document).ready(function () {
         jQuery('#colores li').each(function (i) {
             $(this).css("color", colours[i % colours.length]);
-<<<<<<< HEAD
         }).hover(function (e) {
             $(this).css('opacity', 0.7);
         }, function (e) {
             $(this).css('opacity', 1);
         });
     });
-=======
-        })
-        .hover(function(e){
-            $(this).css('opacity', 0.7);
-        },
-               function(e){
-            $(this).css('opacity',1);
-        });
-    })
->>>>>>> ChatBox/master
     jQuery('#users').html(ol);
 });
 socket.on('newMessage', function (message) {
@@ -95,10 +79,6 @@ jQuery('#message-form').on('submit', function (e) {
     socket.emit('createMessage', {
         text: messageTextBox.val()
     }, function () {
-<<<<<<< HEAD
-        messageTextBox.val('');
-=======
         messageTextBox.val('')
->>>>>>> ChatBox/master
     });
 });
