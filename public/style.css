@@ -111,6 +111,23 @@ button:disabled {
     display: flex;
 }
 
+.RoomName {
+    background: #CE5937;
+    background: linear-gradient(to right, #CE5937 0%, #1C6EA4 50%, #C59237 100%);
+    box-shadow: 8px 0px 0px 0px #DCD0C0, 0px 8px 0px 0px #B1938B, -8px 0px 0px 0px #4E4E56, 0px 0px 0px 8px #DA635D, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.RoomName__text {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
 .chat__sidebar {
     overflow-y: scroll;
     width: 20vw;
@@ -214,7 +231,7 @@ body {
     border-radius: 4px;
     box-shadow: 2px 8px 5px #000;
     position: relative;
-    right:-45%;
+    right: -45%;
 }
 
 .txt {
@@ -281,7 +298,7 @@ span {
 }
 
 .bubble-arrow_alt:after {
-     content: "";
+    content: "";
     position: absolute;
     border: 0 solid transparent;
     border-top: 9px solid #f5f5f5;
@@ -290,4 +307,3 @@ span {
     height: 30px;
     transform: rotate(45deg) scaleY(-1);
 }
-

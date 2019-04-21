@@ -31,6 +31,7 @@ socket.on('connect', function () {
         else {
             console.log('No error');
         }
+        jQuery('.RoomName__text').html(params.room);
     });
 });
 socket.on('disconnect', function () {
@@ -73,6 +74,7 @@ socket.on('newMessage', function (message) {
     jQuery('#messages').append(html);
     scrollToBottom();
 });
+
 jQuery('#message-form').on('submit', function (e) {
     e.preventDefault();
     const messageTextBox = jQuery('[name=message]');
