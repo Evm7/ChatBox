@@ -53,6 +53,10 @@ io.on('connection', (socket) => {
       io.to(user.room).emit('newMessage', generateMessage('Admin', `${user.username} has left`));
     }
   });
+
+    socket.on('typing', (data) =>{
+        socket.broadcast.emit('typing', {username:data})
+    })
 });
 
 server.listen(port, () => {

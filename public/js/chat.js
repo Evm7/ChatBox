@@ -56,6 +56,7 @@ socket.on('updateUserList', function (users) {
 });
 socket.on('newMessage', function (message) {
     const formattedTime = moment(message.createdAt).format('H:mm ');
+    jQuery('.feedback').hide();
     var template;
     //if I send the message
     if (username === message.from) {
@@ -83,4 +84,12 @@ jQuery('#message-form').on('submit', function (e) {
     }, function () {
         messageTextBox.val('')
     });
+});
+
+jQuery('#message-form').bind("keypress", ()=>{
+    socket.emit('typing', username)
+});
+
+socket.on('typing', (data) => {
+    jQuery('.feedback').html("<p><i class='feedback__info'>" + data.username +" is typing a message..."+"</i></p>").show();
 });

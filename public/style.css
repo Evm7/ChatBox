@@ -127,6 +127,19 @@ button:disabled {
     font-variant: small-caps;
     text-transform: none;
 }
+/*The animtion code for making dissappear*/
+@keyframes fadeaway {
+    0% {opacity: 1;}
+    100% {opacity: 0; display: none;}
+}
+
+.feedback__info {
+	animation-name: fadeaway;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+   }
 
 .chat__sidebar {
     overflow-y: scroll;
