@@ -6,7 +6,7 @@ ChatBox is an applicaction client-server which runs in port 9080 and creates a c
 Most important aspect is that it let users to enter an specific group (or room) and messages are only transmitted to this particular room.
 
 
-We have base our proect in the Udemy Course Doccumentation: "The Complete Node js"
+We have base our project in the Udemy Course Doccumentation: "The Complete Node js"
 
 Usage
 -----
